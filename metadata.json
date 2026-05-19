@@ -1,0 +1,8 @@
+{
+  "name": "Cockroach Janta Party",
+  "description": "Satirical political website for the anti-establishment Cockroach Janta Party. Savage, brutal, dark humor, animated with GSAP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cockroach Janta Party - CJP</title>
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Anton for Brutalist Headings, Caveat for hand-drawn look, and Rubik Glitch for broken effects -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Rubik+Glitch&display=swap" rel="stylesheet">
+  </head>
+  <body class="text-white relative overflow-x-hidden selection:bg-[#39FF14] selection:text-black font-sans">
+    
+    <!-- Grain overlay -->
+    <div class="noise-overlay fixed inset-0 pointer-events-none z-[9999] opacity-20 mix-blend-screen" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 400 400%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 p-6 flex justify-between items-center mix-blend-difference">
+      <div class="font-anton text-5xl tracking-widest text-[#39ff14] nav-logo uppercase cursor-pointer hover:scale-110 transition-transform">CJP</div>
+      <button class="bg-[#8B0000] font-anton text-xl px-8 py-3 uppercase border-4 border-transparent hover:border-[#39FF14] hover:skew-x-[-10deg] transition-all duration-300 text-white shadow-[4px_4px_0_#39ff14]">Join The Swarm</button>
+    </nav>
+
+    <main id="smooth-wrapper">
+      <div id="smooth-content">
+
+        <!-- Hero Section -->
+        <section class="h-screen w-full relative flex flex-col items-center justify-center border-b-[10px] border-[#8B0000] overflow-hidden bg-[#050505]">
+          <!-- Canvas for crawling roach particles (managed in main.ts) -->
+          <canvas id="roach-canvas" class="absolute inset-0 z-0 opacity-40"></canvas>
+          
+          <div class="z-10 text-center flex flex-col items-center max-w-7xl px-4">
+            <h1 class="hero-title font-anton text-[12vw] leading-[0.85] text-[#e0e0e0] uppercase relative mix-blend-difference mb-6">
+              <span class="block glitch-text" data-text="Cockroach">Cockroach</span>
+              <span class="block text-[#8B0000] glitch-text" data-text="Janta Party">Janta Party</span>
+            </h1>
+            <div class="hero-tagline bg-[#39FF14] text-black font-caveat text-4xl md:text-6xl px-6 py-2 transform -rotate-3 border-black border-4 shadow-[8px_8px_0_#8B0000]">
+              "We Survive. They Loot. Ab Aur Nahi Sahenge!"
+            </div>
+            
+            <div class="mt-16 flex gap-6 z-20">
+              <button class="bg-black text-[#39FF14] border-2 border-[#39FF14] font-anton text-2xl px-10 py-4 uppercase hover:bg-[#39ff14] hover:text-black transition-colors cta-btn">Join The Revolution</button>
+              <button class="bg-transparent text-white border-2 border-white font-anton text-2xl px-10 py-4 uppercase hover:border-[#8B0000] hover:text-[#8B0000] transition-colors cta-btn">Roast The System</button>
+            </div>
+          </div>
+
+          <div class="absolute bottom-10 z-20 flex flex-col items-center animate-bounce">
+            <p class="font-caveat text-2xl mb-2 text-[#FF9933]">Scroll down, Nethaji</p>
+            <div class="h-16 border-l-4 border-[#39FF14] border-dashed"></div>
+          </div>
+
+          <!-- Abstract symbolic crused art element at bottom -->
+          <svg class="absolute bottom-[-100px] right-[-50px] w-96 h-96 opacity-30 invert" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FF0066" d="M38.8,-42.6C51.6,-28.9,64.2,-14.4,65.6,1.4C66.9,17.2,56.9,34.4,44.1,49.2C31.3,64,15.7,76.4,-0.4,76.8C-16.5,77.3,-33,65.8,-44.6,51C-56.2,36.2,-62.9,18.1,-63.9,-1C-64.8,-20.1,-60,-39.3,-48.4,-53C-36.8,-66.6,-18.4,-74.8,-2,-72.8C14.4,-70.8,28.8,-58.5,38.8,-42.6Z" transform="translate(100 100)" />
+          </svg>
+        </section>
+
+        <!-- The Great Indian Roast -->
+        <section id="roast-section" class="py-32 px-4 md:px-12 bg-[#111] relative overflow-hidden">
+          <div class="text-center mb-24">
+            <h2 class="font-anton text-[8vw] leading-none uppercase text-transparent border-text">The Great Indian Roast</h2>
+            <p class="font-caveat text-4xl text-[#FF9933] mt-4 transform rotate-2">Sab Changa Si? My foot!</p>
+          </div>
+
+          <div class="flex flex-col gap-24 max-w-6xl mx-auto">
+            <!-- Card 1 -->
+            <div class="roast-card relative border-8 border-white bg-black p-8 md:p-16 transform -rotate-1 hover:rotate-0 transition-transform duration-500 shadow-[20px_20px_0_#8B0000]">
+              <div class="absolute -top-10 -left-10 bg-[#39FF14] text-black font-anton px-4 py-2 text-3xl rotate-[-15deg]">#ECONOMY</div>
+              <h3 class="font-rubik text-5xl md:text-7xl mb-6 text-[#FF9933]">Masterstroke Economics</h3>
+              <p class="font-sans text-2xl lg:text-3xl font-bold uppercase leading-tight text-white mb-6">GDP goes to drain, Taxes on the brain.</p>
+              <p class="font-caveat text-3xl text-gray-400 border-l-4 border-[#8B0000] pl-6">"You don't need onions if you don't eat onions. Next, don't breathe, save oxygen!"</p>
+              <!-- Sticker element -->
+              <div class="absolute bottom-4 right-4 bg-red-600 px-4 py-2 font-anton uppercase text-xl skew-x-12 ring-2 ring-white">TAX SLAB INCOMING!</div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="roast-card relative border-8 border-white bg-black p-8 md:p-16 transform rotate-2 hover:rotate-0 transition-transform duration-500 shadow-[-20px_20px_0_#FF9933] ml-auto">
+              <div class="absolute -top-10 -right-10 bg-[#8B0000] text-white font-anton px-4 py-2 text-3xl rotate-[10deg]">#UNEMPLOYMENT</div>
+              <h3 class="font-rubik text-5xl md:text-7xl mb-6 text-[#39FF14]">Pakoda Rozgar Yojana</h3>
+              <p class="font-sans text-2xl lg:text-3xl font-bold uppercase leading-tight text-white mb-6">Degree in hand, Frying pan in demand.</p>
+              <p class="font-caveat text-3xl text-gray-400 border-l-4 border-white pl-6">"Selling pakodas is also employment! Next up: Begging is a startup!"</p>
+              <!-- Scribble -->
+              <div class="absolute top-10 right-10 text-9xl text-white opacity-20 font-caveat">???</div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="roast-card relative border-8 border-[#39FF14] bg-black p-8 md:p-16 transform -rotate-2 hover:rotate-0 transition-transform duration-500 shadow-[20px_20px_0_white]">
+              <div class="absolute -top-10 -left-10 bg-white text-black font-anton px-4 py-2 text-3xl rotate-[-5deg]">#ELECTORAL_BONDS</div>
+              <h3 class="font-rubik text-4xl md:text-6xl mb-6 text-[#8B0000]">Legalized Chanda</h3>
+              <p class="font-sans text-2xl lg:text-3xl font-bold uppercase leading-tight text-white mb-6">Sabka Sath, Sirf Ek Ka Vikas (aur mere friends ka).</p>
+              <p class="font-caveat text-3xl text-gray-400 border-l-4 border-[#39FF14] pl-6">"It's not a scam if it's legal! *winks in Swiss Bank*"</p>
+              <div class="w-full h-8 mt-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMTAiIGN5PSIxMCIgcj0iMiIgZmlsbD0iIzM5RkYxNCIvPjwvc3ZnPg==')] repeat-x opacity-50"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Manifesto of the Unkillable -->
+        <section id="manifesto" class="py-32 bg-[#8B0000] relative text-black border-y-[15px] border-black border-dashed mt-20 transform -skew-y-3 z-20">
+          <!-- Unskew content -->
+          <div class="transform skew-y-3 max-w-6xl mx-auto px-4 relative">
+            
+            <h2 class="font-anton text-6xl md:text-8xl uppercase mb-16 text-white mix-blend-overlay">Manifesto of the <br/><span class="text-[#39FF14]">Unkillable</span></h2>
+            
+            <ul class="space-y-12 manifesto-list text-3xl font-bold uppercase font-sans">
+              <li class="relative pl-16 group hover:translate-x-4 transition-transform text-white">
+                <span class="absolute left-0 top-0 text-5xl font-caveat text-black group-hover:text-[#39FF14] transition-colors">1.</span>
+                <span class="bg-black text-[#39FF14] px-2 py-1 relative">Free Jobs</span> or we infest your VIP farmhouse.
+              </li>
+              <li class="relative pl-16 group hover:translate-x-4 transition-transform text-black">
+                <span class="absolute left-0 top-0 text-5xl font-caveat text-white group-hover:text-black transition-colors">2.</span>
+                Corruption ka <span class="border-b-4 border-black inline-block">permanent fumigation</span>. Hit sprite everywhere!
+              </li>
+              <li class="relative pl-16 group hover:translate-x-4 transition-transform text-white">
+                <span class="absolute left-0 top-0 text-5xl font-caveat text-black group-hover:text-[#39FF14] transition-colors">3.</span>
+                Minister's Bungalow to be repurposed as <span class="bg-white text-red-600 px-2 py-1 transform skew-x-6 inline-block">Public Toilets</span>. 
+              </li>
+              <li class="relative pl-16 group hover:translate-x-4 transition-transform text-black">
+                <span class="absolute left-0 top-0 text-5xl font-caveat text-white group-hover:text-black transition-colors">4.</span>
+                <span class="line-through decoration-[#39FF14] decoration-8">VVIP Culture</span> - Replaced with Roach Equality. Everyone eats garbage.
+              </li>
+            </ul>
+
+            <!-- giant watermark roach -->
+            <div class="absolute top-0 right-0 opacity-10 pointer-events-none transform rotate-12 rotate-[-20deg]">
+              <svg width="400" height="400" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C10.5 2 9 3.5 9 5C9 5.5 9.2 6 9.4 6.4C8 7.3 7 8.9 7 10.8V11H6C5.4 11 5 11.4 5 12C5 12.6 5.4 13 6 13H7V15C7 17.5 8.7 19.5 11 19.9V22H13V19.9C15.3 19.5 17 17.5 17 15V13H18C18.6 13 19 12.6 19 12C19 11.4 18.6 11 18 11H17V10.8C17 8.9 16 7.3 14.6 6.4C14.8 6 15 5.5 15 5C15 3.5 13.5 2 12 2ZM12 4C12.6 4 13 4.4 13 5C13 5.6 12.6 6 12 6C11.4 6 11 5.6 11 5C11 4.4 11.4 4 12 4ZM10 9H14C14.6 9 15 9.4 15 10V15C15 16.7 13.7 18 12 18C10.3 18 9 16.7 9 15V10C9 9.4 9.4 9 10 9Z"/>
+                <!-- Some extra legs -->
+                <path d="M7 11.5L3 9.5M7 13.5L3 15.5M17 11.5L21 9.5M17 13.5L21 15.5" stroke="black" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hall of Shame (Failures Timeline) -->
+        <section id="hall-of-shame" class="py-32 bg-[#000] relative">
+          <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-rubik text-6xl md:text-8xl text-center text-[#ff3333] mb-20 drop-shadow-[0_0_15px_rgba(255,0,0,0.5)]">Hall of Shame</h2>
+            
+            <div class="timeline border-l-4 border-dashed border-[#39FF14] ml-4 md:ml-20 pl-8 space-y-16">
+              
+              <div class="timeline-item relative group">
+                <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-[#39FF14] shadow-[0_0_10px_#39FF14] group-hover:scale-150 transition-transform flex items-center justify-center font-bold text-black font-anton">X</div>
+                <div class="bg-[#111] p-6 border border-gray-800 hover:border-[#ff3333] transition-colors relative overflow-hidden group-hover:skew-x-2">
+                  <span class="font-anton text-[#ff3333] text-2xl absolute right-4 top-4 opacity-50">8 P.M.</span>
+                  <h3 class="font-anton text-4xl text-white mb-2">Demonetization Disaster</h3>
+                  <p class="font-sans text-gray-400 text-lg uppercase font-bold">Stood in lines. Died in lines. Black money slept comfortably.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item relative group">
+                <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-[#39FF14] shadow-[0_0_10px_#39FF14] group-hover:scale-150 transition-transform flex items-center justify-center font-bold text-black font-anton">X</div>
+                <div class="bg-[#111] p-6 border border-gray-800 hover:border-[#ff3333] transition-colors relative overflow-hidden group-hover:-skew-x-2">
+                  <h3 class="font-anton text-4xl text-white mb-2">Pegasus Snooping</h3>
+                  <p class="font-sans text-gray-400 text-lg uppercase font-bold">They watched you poop, but couldn't find the terrorists.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item relative group">
+                <div class="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-[#39FF14] shadow-[0_0_10px_#39FF14] group-hover:scale-150 transition-transform flex items-center justify-center font-bold text-black font-anton">X</div>
+                <div class="bg-[#111] p-6 border border-gray-800 hover:border-[#ff3333] transition-colors relative overflow-hidden group-hover:skew-x-2">
+                  <h3 class="font-anton text-4xl text-white mb-2">Bridge Collapses</h3>
+                  <p class="font-sans text-gray-400 text-lg uppercase font-bold">Inaugurated on Monday. Swims on Tuesday. Tender awarded to brother-in-law on Wednesday.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Join The Army / Form -->
+        <section id="join" class="py-32 bg-[#1a1a1a] border-t-8 border-[#39FF14] relative overflow-hidden flex flex-col items-center">
+          <div class="absolute inset-0 block bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiI+CgkJPGcgc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgoJCQk8cGF0aCBkPSJNMjEgMGwyMSA0MiIKCQkJLz4KCQkJPHBhdGggZD0iTTIxIDQyTDAgMCIKCQkJLz4KCQk8L2c+Cjwvc3ZnPg==')] opacity-30 pointer-events-none"></div>
+
+          <h2 class="font-rubik text-5xl md:text-7xl text-white z-10 uppercase text-center mb-6">Recruit. Infest. Overthrow.</h2>
+          
+          <div class="bg-[#050505] p-8 md:p-12 border-4 border-white shadow-[15px_15px_0_#8B0000] z-10 w-full max-w-2xl transform rotate-1 hover:rotate-0 transition-transform">
+            <div class="text-center mb-8">
+              <p class="font-anton text-3xl text-[#39FF14] mb-2 id-counter timer-element">Roaches Joined Today: <span id="roach-count">64,281</span></p>
+              <p class="font-caveat text-2xl text-gray-400">Warning: No Turning Back.</p>
+            </div>
+            
+            <form id="join-form" class="flex flex-col gap-6">
+              <input type="text" placeholder="GULLY KA NAAM (YOUR NAME)" class="bg-transparent border-2 border-gray-600 px-6 py-4 font-anton text-xl text-white focus:border-[#39FF14] focus:outline-none placeholder-gray-600 focus:bg-[#111]">
+              <input type="text" placeholder="WHATSAPP NUMBER (TO GET DANK MEMES)" class="bg-transparent border-2 border-gray-600 px-6 py-4 font-anton text-xl text-white focus:border-[#39FF14] focus:outline-none placeholder-gray-600 focus:bg-[#111]">
+              <div class="flex items-center gap-4">
+                <input type="checkbox" id="corruption-checkbox" class="w-6 h-6 accent-[#8B0000]">
+                <label for="corruption-checkbox" class="font-sans font-bold uppercase text-gray-300 pointer-events-none">I swear to never take bribes (unless it's over ₹100 crores logic).</label>
+              </div>
+              <button type="button" id="submit-btn" class="bg-[#8B0000] text-white font-anton text-3xl py-6 uppercase hover:bg-white hover:text-black hover:skew-x-[-10deg] transition-all border-4 border-transparent hover:border-black mt-4">PledgE Ally-giance</button>
+            </form>
+          </div>
+
+          <div class="flex gap-8 mt-16 z-10">
+            <a href="#" class="social-btn w-20 h-20 bg-[#25D366] rounded-full flex items-center justify-center hover:scale-125 transition-transform hover:rotate-12 outline outline-offset-4 outline-[#25D366]">
+              <!-- WhatsApp Ico -->
+              <svg width="40" height="40" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+            <a href="#" class="social-btn w-20 h-20 bg-[#0088cc] rounded-full flex items-center justify-center hover:scale-125 transition-transform hover:-rotate-12 outline outline-offset-4 outline-[#0088cc]">
+              <!-- Telegram Ico -->
+              <svg width="40" height="40" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.55 8.16l-1.92 9.04c-.14.65-.54.81-1.08.51l-3-2.21-1.44 1.39c-.16.16-.3.3-.61.3l.21-3.08 5.61-5.06c.24-.22-.05-.34-.38-.11l-6.94 4.37-2.98-.93c-.65-.2-.66-.65.14-.96L16.89 6.8c.86-.32 1.6.2 1.31 1.48l-.65-.12z"/></svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black py-12 text-center relative border-t-2 border-gray-800">
+           <svg class="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-16 h-16 opacity-50 z-10" viewBox="0 0 24 24" fill="#39FF14" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C10.5 2 9 3.5 9 5C9 5.5 9.2 6 9.4 6.4C8 7.3 7 8.9 7 10.8V11H6C5.4 11 5 11.4 5 12C5 12.6 5.4 13 6 13H7V15C7 17.5 8.7 19.5 11 19.9V22H13V19.9C15.3 19.5 17 17.5 17 15V13H18C18.6 13 19 12.6 19 12C19 11.4 18.6 11 18 11H17V10.8C17 8.9 16 7.3 14.6 6.4C14.8 6 15 5.5 15 5C15 3.5 13.5 2 12 2ZM12 4C12.6 4 13 4.4 13 5C13 5.6 12.6 6 12 6C11.4 6 11 5.6 11 5C11 4.4 11.4 4 12 4ZM10 9H14C14.6 9 15 9.4 15 10V15C15 16.7 13.7 18 12 18C10.3 18 9 16.7 9 15V10C9 9.4 9.4 9 10 9Z"/>
+           </svg>
+           <p class="font-anton text-2xl text-gray-500 uppercase mt-4">Made by Survivors. For Survivors.</p>
+           <p class="font-sans text-sm text-gray-800 mt-2">&copy; 2026 Cockroach Janta Party. All kicks reserved.</p>
+        </footer>
+
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

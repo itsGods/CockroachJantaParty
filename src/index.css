@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .border-text {
+    -webkit-text-stroke: 2px white;
+    background: linear-gradient(90deg, transparent 0%, transparent 50%, white 50%, white 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+  }
+}
+
+/* Custom Glitch Text Configuration */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch-layer:nth-child(1) {
+  color: #39FF14;
+  z-index: -1;
+  animation: glitch-anim-1 3s infinite linear alternate-reverse;
+}
+
+.glitch-layer:nth-child(2) {
+  color: #8B0000;
+  z-index: -2;
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+.glitch-layer:nth-child(3) {
+  color: inherit;
+  z-index: 1;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+  20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+  40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+  60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+  80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); }
+  100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+  20% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 1px); }
+  40% { clip-path: inset(50% 0 30% 0); transform: translate(2px, 2px); }
+  60% { clip-path: inset(10% 0 80% 0); transform: translate(-2px, -2px); }
+  80% { clip-path: inset(40% 0 50% 0); transform: translate(1px, 1px); }
+  100% { clip-path: inset(60% 0 10% 0); transform: translate(-1px, -1px); }
+}
+
+html, body {
+  cursor: crosshair;
+}
+
+/* Ensure font families map properly */
+.font-anton { font-family: 'Anton', sans-serif; }
+.font-caveat { font-family: 'Caveat', cursive; }
+.font-rubik { font-family: 'Rubik Glitch', system-ui; }
+
+/* Custom Selection style just to look toxic */
+::selection {
+  background: #39FF14;
+  color: black;
+  text-shadow: none;
+}
